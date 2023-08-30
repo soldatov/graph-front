@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  nginx:
+    container_name:  graph-front
+    image:  graph-front
+    build:
+      context: ./docker/dev/nginx
+    volumes:
+      - .:/var/www
+    ports:
+      - "80:80"
